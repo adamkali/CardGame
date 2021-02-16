@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="cards.xsd"?>
+<CardList>
+	<!-- Gods -->
+	<Card>
+		<Name>The Redemption: Sharvala</Name>
+		<Type>Diety</Type>
+		<Group>Redemption</Group>
+		<Rarity>Mythic</Rarity>
+		<Quality>Normal</Quality>
+		<Description>The God of light and redemption. They created the world in prefection.</Description>
+	</Card>
+	<Card>
+		<Name>The Redemption: Sharvala</Name>
+		<Type>Diety</Type>
+		<Group>Redemption</Group>
+		<Rarity>Mythic</Rarity>
+		<Quality>Exquisite</Quality>
+		<Description>The God of light and redemption. They created the world in prefection. When the light fell on the first day, the Eldritch Entity Goth&apos;Chun, corrupted the night. In the Corruption came the first Demons: The Qual&apos;Thun.</Description>
+	</Card>
+	<Card>
+		<Name>The Redemption: Sharvala</Name>
+		<Type>Diety</Type>
+		<Group>Redemption</Group>
+		<Rarity>Mythic</Rarity>
+		<Quality>Extraordinary</Quality>
+		<Description>The God of light and redemption. They created the world in prefection. When the light fell on the first day, the Eldritch Entity Goth&apos;Chun, corrupted the night. In the Corruption came the first Demons: The Qual&apos;Thun. Sharvala gave redemption to the creatures corrupted. They became the Angels.</Description>
+	</Card>
+	<Card>
+		<Name>The Eldritch Entity: Goth&apos;Chunn</Name>
+		<Type>Diety</Type>
+		<Group>The Eldritch</Group>
+		<Rarity>Mythic</Rarity>
+		<Quality>Normal</Quality>
+		<Description>The Eldritch Entity came when the light first decended in creation. It corrupted all that it influenced. </Description>
+	</Card>
+	<Card>
+		<Name>The Eldritch Entity: Goth&apos;Chunn</Name>
+		<Type>Diety</Type>
+		<Group>The Eldritch</Group>
+		<Rarity>Mythic</Rarity>
+		<Quality>Exquisite</Quality>
+		<Description>The Eldritch Entity came when the light first decended in creation. It corrupted all that it influenced. It stole the seed of creation and created the Enthraldin, its connection to the Material plane.</Description>
+	</Card>
+	<Card>
+		<Name>The Eldritch Entity: Goth&apos;Chuun</Name>
+		<Type>Diety</Type>
+		<Group>Redentmption</Group>
+		<Rarity>Mythic</Rarity>
+		<Quality>Extraordinary</Quality>
+		<Description>The Eldritch Entity came when the light first decended in creation. It corrupted all that it influenced. It stole the seed of creation and created the Enthraldin, its connection to the Material plane. For then it was banish to the writhing chaos once more it still corrupted Sharvala&apos;s Masterpiece.</Description>
+	</Card>
+
+	<!--Characters-->
+	<Card>
+		<Name>Merlin</Name>
+		<Type>Character</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Legendary</Rarity>
+		<Quality>Normal</Quality>
+		<Description>A legendary mage who has tutored Kings, and has brought peace to the land.</Description>
+	</Card>
+	<Card>
+		<Name>Merlin</Name>
+		<Type>Character</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Legendary</Rarity>
+		<Quality>Exquisite</Quality>
+		<Description>A legendary mage who has tutored Kings, and has brought peace to the land. Once, Merlin was a hero who would go out into the world on quests, but know he has become old and searches for an apprentice.</Description>
+	</Card>
+	<Card>
+		<Name>Dagamond</Name>
+		<Type>Character</Type>
+		<Group>The Corruption</Group>
+		<Rarity>Legendary</Rarity>
+		<Quality>Normal</Quality>
+		<Description>A warlock who has dedicated his life to the destruction of The Alliance. He has offered his soul to the Eldritch Entity.</Description>
+	</Card>
+	<Card>
+		<Name>Dagamond</Name>
+		<Type>Character</Type>
+		<Group>The Corruption</Group>
+		<Rarity>Legendary</Rarity>
+		<Quality>Exquisite</Quality>
+		<Description>A warlock who has dedicated his life to the destruction of The Alliance. He has offered his Soul to the Eldritch Entity. He was Merlin&apos;s apprentice until one fateful day when he was corrupted by the Enthralin.</Description>
+	</Card>
+	<Card>
+		<Name>Tywryn Everheart</Name>
+		<Type>Character</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Legendary</Rarity>
+		<Quality>Normal</Quality>
+		<Description>Tywryn is Merlin&apos;s prodigy. She has mastered the Arcane Arts and has become better than Merlin ever was.</Description>
+	</Card>
+	<Card>
+		<Name>Tywryn Everheart</Name>
+		<Type>Character</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Legendary</Rarity>
+		<Quality>Exquisite</Quality>
+		<Description>Tywryn is Merlin&apos;s prodigy. She has mastered the Arcane Arts and has become better than Merlin ever was. After the fall of Dagomond, Merlin went without an apprentice for three centuries, but then Dagomond returned spreading the Corruption. In desperation, Merlin taught Tywryn all he knew. But She became a force greater than anyone could imagine.</Description>
+	</Card>
+	<Card>
+		<Name>Qual&apos;Thun</Name>
+		<Type>Character</Type>
+		<Group>The Corruption</Group>
+		<Rarity>Epic</Rarity>
+		<Quality>Normal</Quality>
+		<Description>The earliest and most ancient of the Demons created by The Corruption.</Description>
+	</Card>
+	<Card>
+		<Name>Qual&apos;Thun</Name>
+		<Type>Character</Type>
+		<Group>The Corruption</Group>
+		<Rarity>Epic</Rarity>
+		<Quality>Exquisite</Quality>
+		<Description>The earliest and most ancient of the Demons created by The Corruption. In the beginning, the Aldrin were created by Sharvala to populate creation; however, when The Corruption came many of the Aldrin were turned into Demons and Monsters. The Qual&apos;Thun, was one of these Demons. </Description>
+	</Card>
+	<Card>
+		<Name>Nobel Knight</Name>
+		<Type>Character</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Epic</Rarity>
+		<Quality>Normal</Quality>
+		<Description>A powerful warrior who is sworn to protect The Kingdom of Shalamend and The Alliance.</Description>
+	</Card>
+	<Card>
+		<Name>Nobel Knight</Name>
+		<Type>Character</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Epic</Rarity>
+		<Quality>Normal</Quality>
+		<Description>A powerful warrior who is sworn to protect The Kingdom of Shalamend and The Alliance. The Knights, originally distinful of Mages, have come to respect the powers that the Mages can bestow.</Description>
+	</Card>
+	<Card>
+		<Name>Wardens of Eromir</Name>
+		<Type>Character</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Epic</Rarity>
+		<Quality>Normal</Quality>
+		<Description>An elite group of magical heavy infantry that have been trained by Tywryn to use the simple but deadly spells.</Description>
+	</Card>
+	<Card>
+		<Name>Wardens of Eromir</Name>
+		<Type>Character</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Epic</Rarity>
+		<Quality>Normal</Quality>
+		<Description>An elite group of magical heavy infantry that have been trained by Tywryn to use the simple but deadly spells. The combination of chivalarous and magical arts turned these Knights into deadly counter weapons against The Corruption.</Description>
+	</Card>
+	<Card>
+		<Name>A Wretched</Name>
+		<Type>Character</Type>
+		<Group>The Corruption</Group>
+		<Rarity>Epic</Rarity>
+		<Quality>Normal</Quality>
+		<Description>A wretched is a white mass of pure eldritch chaos. It was created by Dagamond as a shock troop and he was pleased to find his expierements were more than successful.</Description>
+	</Card>
+	<Card>
+		<Name>A Wretched</Name>
+		<Type>Character</Type>
+		<Group>The Corruption</Group>
+		<Rarity>Epic</Rarity>
+		<Quality>Exquisite</Quality>
+		<Description>A wretched is a white mass of pure eldritch chaos. It was created by Dagamond as a shock troop and he was pleased to find his expierements were more than successful. It stands as tall as three men and with the strength of a bear. Worst of all, it smells like overpowering curddled milk.</Description>
+	</Card>
+	<Card>
+		<Name>Hellhound</Name>
+		<Type>Character</Type>
+		<Group>The Corruption</Group>
+		<Rarity>Epic</Rarity>
+		<Quality>Normal</Quality>
+		<Description>A spawn of the Enthralin that consist a majority of Dagamond&apos;s Troops.</Description>
+	</Card>
+	<Card>
+		<Name>Hellhound</Name>
+		<Type>Character</Type>
+		<Group>The Corruption</Group>
+		<Rarity>Epic</Rarity>
+		<Quality>Exquisite</Quality>
+		<Description>A spawn of the Enthralin that consist a majority of Dagamond&apos;s Troops. Hellhounds were the first of the spawn of the Enthraldin from Dagamond, and such over the last five years they have become more and more Deadly.</Description>
+	</Card>
+	<Card>
+		<Name>Peasant Militia</Name>
+		<Type>Character</Type>
+		<Group>Neutral</Group>
+		<Rarity>Rare</Rarity>
+		<Quality>Normal</Quality>
+		<Description>The people of the Alliance are scared and want to take up arms to make themselves safe, but are they strong enough to survive?</Description>
+	</Card>
+	<Card>
+		<Name>Market Mage</Name>
+		<Type>Character</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Rare</Rarity>
+		<Quality>Normal</Quality>
+		<Description>While in other citys of the Alliance it is rare to see a Mage, in Eromir it is so commonplace that witches and wizards come and sell their goods in the market.</Description>
+	</Card>
+	<Card>
+		<Name>Hapless Squire</Name>
+		<Type>Character</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Common</Rarity>
+		<Quality>Normal</Quality>
+		<Description>A common squire that is serving with others under a knight, a Mage, or (if they are so lucky) a Warden.</Description>
+	</Card>
+	<Card>
+		<Name>Road Bandit</Name>
+		<Type>Character</Type>
+		<Group>Neutral</Group>
+		<Rarity>Common</Rarity>
+		<Quality>Normal</Quality>
+		<Description>Before Dagamond came back, the twin kingdoms the Tarkom (Shalamend and Aerathus) had very secure roads, but now enterprising vagabonds are taking to a life of crime to pay the war taxes.</Description>
+	</Card>
+	<Card>
+		<Name>Poor farmer</Name>
+		<Type>Character</Type>
+		<Group>Neutral</Group>
+		<Rarity>Common</Rarity>
+		<Quality>Normal</Quality>
+		<Description>A simple farmer, they are just trying to make it through the winter without any demons attacking.</Description>
+	</Card>
+	<Card>
+		<Name>Qualing</Name>
+		<Type>Character</Type>
+		<Group>Neutral</Group>
+		<Rarity>Common</Rarity>
+		<Quality>Normal</Quality>
+		<Description>A bird with deep purple feathers, they enhabit places where there is lots of magic so they naturally congrigate to Eromir. The Qualing on a green background is Merlin&apos;s coat of arms.</Description>
+	</Card>
+	<Card>
+		<Name>Imp</Name>
+		<Type>Character</Type>
+		<Group>The Corruption</Group>
+		<Rarity>Common</Rarity>
+		<Quality>Normal</Quality>
+		<Description>An Imp is the simplest of demons from the Citadel. The are more tricksters and annoyances than a threat.</Description>
+	</Card>
+
+	<!--Places-->
+	<Card>
+		<Name>Eromir</Name>
+		<Type>Place</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Epic</Rarity>
+		<Quality>Normal</Quality>
+		<Description>Eromir is the seat of The Alliance, where the streets are lined with the light of magic. </Description>
+	</Card>
+	<Card>
+		<Name>Eromir</Name>
+		<Type>Place</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Epic</Rarity>
+		<Quality>Exquisite</Quality>
+		<Description>Eromir is the seat of The Alliance, where the streets are lined with the light of magic. Once a rural town, it has become a refuge for good ever since Merlin came to power.</Description>
+	</Card>
+	<Card>
+		<Name>The Citadel</Name>
+		<Type>Place</Type>
+		<Group>The Corruption</Group>
+		<Rarity>Epic</Rarity>
+		<Quality>Normal</Quality>
+		<Description>The propagation of all evil that serves as the seat of Dagomond.</Description>
+	</Card>
+	<Card>
+		<Name>The Citadel</Name>
+		<Type>Place</Type>
+		<Group>The Corruption</Group>
+		<Rarity>Epic</Rarity>
+		<Quality>Exquisite</Quality>
+		<Description>The propagation of all evil that serves as the seat of Dagomond. This was once a ruin where Merlin and Dagamond found the Enthraldin.</Description>
+	</Card>
+	
+	<!--Weapons-->
+	<Card>
+		<Name>Vollux</Name>
+		<Type>Weapon</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Legendary</Rarity>
+		<Quality>Normal</Quality>
+		<Description>The famous staff of Merlin the Wizard. It is regarded as a symbol of peace in the land.</Description>
+	</Card>
+	<Card>
+		<Name>Vollux</Name>
+		<Type>Weapon</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Legendary</Rarity>
+		<Quality>Normal</Quality>
+		<Description>The famous staff of Merlin the Wizard. It is regarded as a symbol of peace in the land. It is made of pure white Elderwood.</Description>
+	</Card>
+	<Card>
+		<Name>The Enthraldin</Name>
+		<Type>Weapon</Type>
+		<Group>The Corruption</Group>
+		<Rarity>Legendary</Rarity>
+		<Quality>Normal</Quality>
+		<Description>The seed of the Corruption, and the soul of the Eldritch Entity.</Description>
+	</Card>
+	<Card>
+		<Name>The Enthraldin</Name>
+		<Type>Weapon</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Legendary</Rarity>
+		<Quality>Normal</Quality>
+		<Description>The seed of the Corruption, and the soul of the Eldritch Entity. When Dagomond touched the artifact, he changed from an innocent wide-eyed apprentice to a rutheless master of the Eldritch.</Description>
+	</Card>
+	<Card>
+		<Name>A Katusk</Name>
+		<Type>Weapon</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Epic</Rarity>
+		<Quality>Normal</Quality>
+		<Description>A Katusk was given to the Wardens as their weapons of choice. Imbuded with violent spells, it is truly the weapon of soldiers.</Description>
+	</Card>
+	<Card>
+		<Name>A Katusk</Name>
+		<Type>Weapon</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Epic</Rarity>
+		<Quality>Exquisite</Quality>
+		<Description>A Katusk was given to the Wardens as their weapons of choice. Imbuded with violent spells, it is truly the weapon of soldiers. Engineered by Tywryn and forged by the forges of Eromir, a Katusk.</Description>
+	</Card>
+	<Card>
+		<Name>Elm</Name>
+		<Type>Weapon</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Epic</Rarity>
+		<Quality>Normal</Quality>
+		<Description>This is Tywryn&apos;s halberd. While she has been the lead enchantress in the production of the Katusks, she has refrained from enchanting her beloved weapon of choice.</Description>
+	</Card>
+	<Card>
+		<Name>Elm</Name>
+		<Type>Weapon</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Epic</Rarity>
+		<Quality>Normal</Quality>
+		<Description>This is Tywryn&apos;s halberd. While she has been the lead enchantress in the production of the Katusks, she has refrained from enchanting her beloved weapon of choice. Some say it is because she uses her magical items to the point of them breaking. Others say it is because of sentimental reasons. But in the end, Tywryn will not say.</Description>
+	</Card>
+	<Card>
+		<Name>Greatsword</Name>
+		<Type>Weapon</Type>
+		<Group>Neutral</Group>
+		<Rarity>Rare</Rarity>
+		<Quality>Normal</Quality>
+		<Description>The Greatsword used to just be a status symbol amongst the nobility; however, now the greatsword is a symbol of hope amongst the peasentry: that all will be ok.</Description>
+	</Card>
+	<Card>
+		<Name>Catapault</Name>
+		<Type>Weapon</Type>
+		<Group>Neutral</Group>
+		<Rarity>Rare</Rarity>
+		<Quality>Normal</Quality>
+		<Description>A siege weapon necessary of taking on the demons of the Corruption like a Wretched or a Qual&apos;Thun that tower over a poor peasent.</Description>
+	</Card>
+	
+	<!--Spells-->
+	<Card>
+		<Name>Tywryn&apos;s Purification</Name>
+		<Type>Spell</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Epic</Rarity>
+		<Quality>Normal</Quality>
+		<Description>Tywryn Created this spell to fight back against the forces of The Corruption. It shines with a blue light.</Description>
+	</Card>
+	<Card>
+		<Name>Tywryn&apos;s Purification.</Name>
+		<Type>Spell</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Epic</Rarity>
+		<Quality>Exquisite</Quality>
+		<Description>Tywryn Created this spell to fight back against the forces of The Corruption. It shines with a blue light, as it flies through the air. This Spell was created to save Merlin when the two of them were in a dire spot fighting a Qual&apos;Thun.</Description>
+	</Card>
+	<Card>
+		<Name>Spark</Name>
+		<Type>Spell</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Common</Rarity>
+		<Quality>Normal</Quality>
+		<Description>Every Mage&apos;s first spell. Can be cast in many colors and shapes.</Description>
+	</Card>
+	<Card>
+		<Name>Corruption</Name>
+		<Type>Spell</Type>
+		<Group>The Corruption</Group>
+		<Rarity>Rare</Rarity>
+		<Quality>Normal</Quality>
+		<Description>A simple spell that corrupts the soul of the afflicted.</Description>
+	</Card>
+</CardList>
