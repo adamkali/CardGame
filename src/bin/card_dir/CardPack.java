@@ -8,7 +8,7 @@ import java.util.Random;
 public class CardPack {
 
     private CardXmlParse cardXmlParse;
-    private List<Card> packOfCards = new ArrayList<>();
+    private List<Card> packOfCards = new ArrayList<Card>();
     private Card exquisiteOrBetterCard;
     private Card rareOrBetterCard;
     private Random rand = new SecureRandom();
@@ -73,11 +73,15 @@ public class CardPack {
             }
         }
 
-        for ( int instance = 0; instance < rareCards.size(); instance++ ) {
-            if ( getPullChance(rareCards.get(instance)) ) {
+        boolean flag = true;
+        while ( flag ) {
 
-                this.rareOrBetterCard = rareCards.get(instance);
-                break;                
+            for ( int instance = 0; instance < rareCards.size(); instance++ ) {
+                if ( getPullChance(rareCards.get(instance)) ) {
+                    this.rareOrBetterCard = rareCards.get(instance);
+                    flag = false;
+                    break;                
+                }
             }
         }
     }
@@ -88,6 +92,7 @@ public class CardPack {
         List<Card> exquisiteCards = new ArrayList<>();
         List<Card> lCards = getCardXmlParse().getCardList();
 
+
         for ( int instance = 0; instance < lCards.size(); instance++ ) {
             Card fooCard = lCards.get(instance);
             
@@ -95,11 +100,16 @@ public class CardPack {
                 exquisiteCards.add(fooCard);
             }
         }
+
+        boolean flag = true;
+        while ( flag ) {
         
-        for ( int instance = 0; instance < exquisiteCards.size(); instance++ ) {
-            if ( getPullChance(exquisiteCards.get(instance)) ) { 
-                this.exquisiteOrBetterCard = exquisiteCards.get(instance);
-                break;
+            for ( int instance = 0; instance < exquisiteCards.size(); instance++ ) {
+                if ( getPullChance(exquisiteCards.get(instance)) ) { 
+                    this.exquisiteOrBetterCard = exquisiteCards.get(instance);
+                    flag = false;
+                    break;
+                }
             }
         }
     }

@@ -52,9 +52,10 @@ public class CardPackTest {
         int iterator = 0;
 
         while ( iterator < howMany ) {
-            List<Card> cList = new CardPack(sourceString).getPack();
-            
             System.out.println("Pack No. " + (iterator + 1));
+            
+            List<Card> cList = new CardPack(sourceString).getPack();
+
             getHowManyRareOrBetterCards(cList);
             getHowManyExquisiteOrBetterCards(cList);
             
@@ -74,7 +75,7 @@ public class CardPackTest {
         test.getHowManyRareOrBetterCards(testXmlCards);
         test.getHowManyExquisiteOrBetterCards(testXmlCards);
 
-        test.testALotOfPacks(10, fileString);
+        test.testALotOfPacks(50, fileString);
 
     }
 
