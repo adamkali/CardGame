@@ -39,6 +39,32 @@ public class CardPack {
 
     }
 
+    public CardPack( CardXmlParse collectionCardXmlParse ) {
+
+        setCardXmlParse( collectionCardXmlParse );
+
+        determineExquisiteOrBetter();
+        determineRareOrBetter();
+
+        /*
+        * This loop here is to get the card list created by the xml file and get a random card from said list
+        */
+        int inst = 0;
+        while ( inst < 5 ) {
+            Card fooCard = getCardXmlParse().getCardList().get(rand.nextInt(getCardXmlParse().getCardList().size()));
+            if ( getPullChance(fooCard) ) {
+                addCardToPack(fooCard);
+                inst++;
+            }
+        }
+
+
+        // Adds in the determined rare or better or the exquisite or better cards
+        getPack().add(getRareOrBetterCard());
+        getPack().add(getExquisiteOrBetterCard());
+
+    }
+
     public CardXmlParse getCardXmlParse() { return cardXmlParse; }
 
     private Card getRareOrBetterCard() { return rareOrBetterCard; }

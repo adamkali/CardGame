@@ -275,7 +275,7 @@
 		<Type>Place</Type>
 		<Group>Neutral</Group>
 		<Rarity>Common</Rarity>
-		<Qualtiy>Normal</Quality>
+		<Quality>Normal</Quality>
 		<Description>An open grassy field that is a place where you could sleep the day away. The twin kingdoms are full of these simple but pleasent fields.</Description>
 	</Card>
 
@@ -365,7 +365,7 @@
 		<Type>Weapon</Type>
 		<Group>Neutral</Group>
 		<Rarity>Common</Rarity>
-		<Qualtiy>Normal</Quality>
+		<Quality>Normal</Quality>
 		<Description>The favored weapons of the peasantry. Nothing beats keeping your enemies at bay and then burning them.</Description>
 	</Card>
 	<Card>
@@ -373,8 +373,8 @@
 		<Type>Weapon</Type>
 		<Group>The Alliance</Group>
 		<Rarity>Common</Rarity>
-		<Qualtiy>Normal</Quality>
-		<Description></Description>
+		<Quality>Normal</Quality>
+		<Description>A simple horn designed to alert hunters that the hunt is on.</Description>
 	</Card>
 
 	<!--Spells-->
@@ -399,7 +399,7 @@
 		<Type>Spell</Type>
 		<Group>Neutral</Group>
 		<Rarity>Rare</Rarity>
-		<Qualtiy>Normal</Quality>
+		<Quality>Normal</Quality>
 		<Description>The signiture of any mage. It burns hot and destroys what it hits.</Description>
 	</Card>
 	<Card>
@@ -407,7 +407,7 @@
 		<Type>Spell</Type>
 		<Group>Neutral</Group>
 		<Rarity>Common</Rarity>
-		<Qualtiy>Normal</Quality>
+		<Quality>Normal</Quality>
 		<Description>A favorite among the mages. Create lights, sounds, and even smells.</Description>
 	</Card>
 	<Card>
