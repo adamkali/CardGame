@@ -16,9 +16,16 @@ public class Player {
     // To be implemented with SQL
     private int mana;
 
-    public Player( String aString ) {
+    public Player() {
         // To Do
-
+        if ( isAccountCreated() ) {
+            // Do nothing for now
+        } else {
+            String accountString = System.console().readLine();
+            String passString = System.console().readLine();
+            String confirmPassString = System.console().readLine();
+            createPlayerAccount(accountString, passString, confirmPassString);
+        }
     }
 
     public String getAccount() {
@@ -36,6 +43,8 @@ public class Player {
     public void setAccount(String account) {
         this.account = account;
     }
+
+    private boolean isAccountCreated() { return false; }
 
     public void createPlayerAccount( String username, String password, String confirmPassword ) {
         boolean uFlag = false;
