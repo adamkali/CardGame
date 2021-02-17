@@ -270,7 +270,15 @@
 		<Quality>Exquisite</Quality>
 		<Description>The propagation of all evil that serves as the seat of Dagomond. This was once a ruin where Merlin and Dagamond found the Enthraldin.</Description>
 	</Card>
-	
+	<Card>
+		<Name>Grassy Field</Name>
+		<Type>Place</Type>
+		<Group>Neutral</Group>
+		<Rarity>Common</Rarity>
+		<Qualtiy>Normal</Quality>
+		<Description>An open grassy field that is a place where you could sleep the day away. The twin kingdoms are full of these simple but pleasent fields.</Description>
+	</Card>
+
 	<!--Weapons-->
 	<Card>
 		<Name>Vollux</Name>
@@ -352,7 +360,23 @@
 		<Quality>Normal</Quality>
 		<Description>A siege weapon necessary of taking on the demons of the Corruption like a Wretched or a Qual&apos;Thun that tower over a poor peasent.</Description>
 	</Card>
-	
+	<Card>
+		<Name>Pitchfork and Torch</Name>
+		<Type>Weapon</Type>
+		<Group>Neutral</Group>
+		<Rarity>Common</Rarity>
+		<Qualtiy>Normal</Quality>
+		<Description>The favored weapons of the peasantry. Nothing beats keeping your enemies at bay and then burning them.</Description>
+	</Card>
+	<Card>
+		<Name>Hunting Horn</Name>
+		<Type>Weapon</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Common</Rarity>
+		<Qualtiy>Normal</Quality>
+		<Description></Description>
+	</Card>
+
 	<!--Spells-->
 	<Card>
 		<Name>Tywryn&apos;s Purification</Name>
@@ -371,12 +395,20 @@
 		<Description>Tywryn Created this spell to fight back against the forces of The Corruption. It shines with a blue light, as it flies through the air. This Spell was created to save Merlin when the two of them were in a dire spot fighting a Qual&apos;Thun.</Description>
 	</Card>
 	<Card>
-		<Name>Spark</Name>
+		<Name>Fireball</Name>
 		<Type>Spell</Type>
-		<Group>The Alliance</Group>
+		<Group>Neutral</Group>
+		<Rarity>Rare</Rarity>
+		<Qualtiy>Normal</Quality>
+		<Description>The signiture of any mage. It burns hot and destroys what it hits.</Description>
+	</Card>
+	<Card>
+		<Name>Prestidigitation</Name>
+		<Type>Spell</Type>
+		<Group>Neutral</Group>
 		<Rarity>Common</Rarity>
-		<Quality>Normal</Quality>
-		<Description>Every Mage&apos;s first spell. Can be cast in many colors and shapes.</Description>
+		<Qualtiy>Normal</Quality>
+		<Description>A favorite among the mages. Create lights, sounds, and even smells.</Description>
 	</Card>
 	<Card>
 		<Name>Corruption</Name>
@@ -386,4 +418,13 @@
 		<Quality>Normal</Quality>
 		<Description>A simple spell that corrupts the soul of the afflicted.</Description>
 	</Card>
+	<Card>
+		<Name>Spark</Name>
+		<Type>Spell</Type>
+		<Group>The Alliance</Group>
+		<Rarity>Common</Rarity>
+		<Quality>Normal</Quality>
+		<Description>Every Mage&apos;s first spell. Can be cast in many colors and shapes.</Description>
+	</Card>
+
 </CardList>
