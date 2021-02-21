@@ -3,6 +3,8 @@ package CardGame.src.bin.game_dir;
 import CardGame.src.bin.card_dir.*;
 
 public class Game {
+
+    
     
     private CardXmlParse allCards = new CardXmlParse("CardGame\\data\\cards.xml");
 

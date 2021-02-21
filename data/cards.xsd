@@ -13,9 +13,11 @@
                             <xs:element name="Quality" type="xs:string" />
                             <xs:element name="Description" type="xs:string" />
                         </xs:sequence>
+                        <xs:attribute name="CardId" type="xs:integer" use="required"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
+            <xs:attribute name="CollectionName" type="xs:ID" use="required"/>
         </xs:complexType>
     </xs:element>
 </xs:schema>
