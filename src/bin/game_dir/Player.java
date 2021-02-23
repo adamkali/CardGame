@@ -62,6 +62,8 @@ public class Player {
         this.account = account;
     }
 
+    // Authentication
+
     public void createPlayerAccount( String username, String wantedPassword, String confirmPassword ) throws LogInException {
         boolean uFlag = false;
         boolean pFlag = false; 
@@ -111,5 +113,15 @@ public class Player {
         Matcher doesUNameMatch = regexUNamePattern.matcher(uName);
 
         return doesUNameMatch.matches();
+    }
+
+    public void openPack( CardXmlParse xml ) {
+        CardPack cardPack = new CardPack(xml);
+        
+        cardPack.printPackOfCards();
+
+        for ( Card elementCard : cardPack.getPack() ) {
+            cardCollection.add(elementCard);
+        }
     }
 }

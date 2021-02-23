@@ -3,12 +3,17 @@ package CardGame.src.bin.game_dir;
 import CardGame.src.bin.card_dir.*;
 
 public class Game {
-
-    
     
     private CardXmlParse allCards = new CardXmlParse("CardGame\\data\\cards.xml");
-
+    private Player player;
     private boolean isGameOn;
+    private boolean isLoggedIn;
+
+    private Player getPlayer() { return player; }
+
+    private void setPlayer( String uString, String pString ) { this.player = new Player(uString, pString); }
+
+    private void createPlayer( String uString, String wString, String cString ) { this.player = new Player(uString, wString, cString); }
 
     private CardXmlParse getAllCards() { return allCards; } 
 
@@ -18,26 +23,26 @@ public class Game {
 
     private void quitGame() { this.isGameOn = false; }
 
-    private void openPack() {
-        CardPack cardPack = new CardPack(getAllCards());
-        cardPack.printPackOfCards();
+    private void gameLogIn() {
+        String uName = System.console().readLine("Username: ");
+        String pWord = System.console().readLine("Password: ");
+
+        setPlayer(uName, pWord);
+    }
+
+    private void gameCreateAccount() {
+        String uName = System.console().readLine("Username: ");
+        String wantPass = System.console().readLine("Password: ");
+        String confPass = System.console().readLine("Confirm Password: ");
+
+        createPlayer(uName, wantPass, confPass);        
     }
 
     public void runGame() {
         startGame();
 
         while ( getIsGameOn() ) {
-            System.out.println("Choose either to [Open] a pack or to [Quit]\n\n");            
-            String choice = System.console().readLine();
-
-            if ( choice.equalsIgnoreCase("open") || choice.equalsIgnoreCase("o") ) {
-                openPack();
-                System.out.println("\n");
-            } else if ( choice.equalsIgnoreCase("quit") || choice.equalsIgnoreCase("Q") ) {
-                quitGame();
-            } else {
-                System.out.println("Invalid choice. Please choose again.\n");
-            }
+            
 
         }
 
