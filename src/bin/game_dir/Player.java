@@ -1,13 +1,18 @@
 package CardGame.src.bin.game_dir;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import CardGame.src.bin.card_dir.*;
+import CardGame.src.bin.errs.LogInException;
+import CardGame.src.bin.sql_dir.*;
 
 public class Player {
+
+    private SqlAccounts sqlAccount;
 
     // This is determined by the Cards they get.
     private List<Card> cardCollection = new ArrayList<Card>();
@@ -16,15 +21,28 @@ public class Player {
     // To be implemented with SQL
     private int mana;
 
-    public Player() {
-        // To Do
-        if ( isAccountCreated() ) {
-            // Do nothing for now
-        } else {
-            String accountString = System.console().readLine();
-            String passString = System.console().readLine();
-            String confirmPassString = System.console().readLine();
-            createPlayerAccount(accountString, passString, confirmPassString);
+    public boolean isConnected = true;
+
+    public Player( String uName, String pWord) {
+
+        sqlAccount = new SqlAccounts(uName, pWord);
+
+        while ( sqlAccount.loginCase ) {
+            if ( sqlAccount.loginToAccount() ) {
+                setAccount(uName);
+                setPassword(pWord);
+            }
+        }
+    }
+
+    public Player( String uName, String wantedPWord, String confirmPWord ) {
+        
+        try {
+            createPlayerAccount(uName, wantedPWord, confirmPWord);
+            sqlAccount = new SqlAccounts(getAccount(), getPassword());
+            sqlAccount.createPlayerAccount();
+        } catch (LogInException | SQLException e) {
+            e.printStackTrace();
         }
     }
 
@@ -44,20 +62,20 @@ public class Player {
         this.account = account;
     }
 
-    private boolean isAccountCreated() { return false; }
-
-    public void createPlayerAccount( String username, String password, String confirmPassword ) {
+    public void createPlayerAccount( String username, String wantedPassword, String confirmPassword ) throws LogInException {
         boolean uFlag = false;
         boolean pFlag = false; 
 
         // isUsed will not be gratuitous when SQL is implemented.
-        if ( isUsed(username) && isUNameValid(username) ) { uFlag = true; }
+        if ( isUNameValid(username) ) { uFlag = true; }
 
-        if ( password.equals(confirmPassword) && isPasswordValid(password) ) { pFlag = true; }
+        if ( wantedPassword.equals(confirmPassword) && isPasswordValid(password) ) { pFlag = true; }
 
         if ( uFlag && pFlag ) {
-            setPassword(password);
+            setPassword(wantedPassword);
             setAccount(username);
+        }  else { 
+            throw new LogInException("Credentials are not valid.");
         }
     }
 
@@ -94,10 +112,4 @@ public class Player {
 
         return doesUNameMatch.matches();
     }
-
-    private static boolean isUsed( String uName ) {
-        // To Do
-        return true;
-    }
-
 }

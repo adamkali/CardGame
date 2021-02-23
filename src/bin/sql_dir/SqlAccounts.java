@@ -11,28 +11,24 @@ public class SqlAccounts {
     private String username;
     private String password;
     private boolean isAccountCreated;
-    private static int numberOfAccounts;
+    private int numberOfAccounts;
 
-    private Connection accountConnection; 
+    private Connection accountConnection;
 
-    public SqlAccounts( String Name, String Password ) {
+    public boolean loginCase;
+
+    public SqlAccounts(String Name, String Password) {
 
         setUsername(Name);
         setPassword(Password);
 
         try {
             startConnection();
-            checkAccount(getUsername(), getPassword());
-            setAccountNumber();
-        } catch ( SQLException sqlException ) {
-            sqlException.printStackTrace();
+        } catch (SQLException sqlException) {
+            loginCase = false;
+        } finally {
+            loginCase = true;
         }
-    }
-
-
-
-    private void setIsAccountCreated(boolean isIt) {
-        this.isAccountCreated = isIt;
     }
 
     private void setUsername( String uname ) { this.username = uname;}
@@ -52,9 +48,10 @@ public class SqlAccounts {
 
     private void startConnection() throws SQLException {
         this.accountConnection = DriverManager.getConnection("jbdc:mysql:localhost:3306/accountdatabase", "root", "Sierra&Adam4ever");
+        setAccountNumber();
     }
 
-    public void checkAccount( String queryUName, String queryPassword ) throws SQLException {
+    public boolean checkAccount( String queryUName, String queryPassword ) throws SQLException {
         getAccountConnection();
         
         PreparedStatement statement = getAccountConnection().prepareStatement("Select name, password from account where name=? and password=?");
@@ -64,8 +61,7 @@ public class SqlAccounts {
 
         ResultSet result = statement.executeQuery();
 
-        setIsAccountCreated(result.next());
-
+        return result.next();
     }
     
     private void setAccountNumber() throws SQLException {
@@ -80,13 +76,22 @@ public class SqlAccounts {
 
     }
 
-    public void createPlayerAccount( ) throws SQLException {
+    public void createPlayerAccount() throws SQLException {
 
        Statement statement = getAccountConnection().createStatement();
 
-       int nextNumber = numberOfAccounts + 1;
+       int nextNumber = getNumberOfAccounts() + 1;
 
-       statement.executeUpdate("INSERT INTO Accounts VALUES ( " +  " )");
+       statement.executeUpdate("INSERT INTO Accounts VALUES ( " + nextNumber + ", '" + getUsername() + "', '" + getPassword() + "' )");
     }
 
+    public boolean loginToAccount() {
+        
+        try {
+            return checkAccount(getUsername(), getPassword());
+        } catch (SQLException e) {
+            loginCase = false;
+        }
+        return false; 
+    }
 }
