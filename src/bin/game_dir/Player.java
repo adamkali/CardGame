@@ -124,4 +124,11 @@ public class Player {
             cardCollection.add(elementCard);
         }
     }
+
+    public void showCollection() {
+        for ( Card elementCard : cardCollection ) {
+            System.out.println(elementCard);
+            System.out.println("\n");
+        }
+    }
 }

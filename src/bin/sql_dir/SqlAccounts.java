@@ -85,6 +85,7 @@ public class SqlAccounts {
        statement.executeUpdate("INSERT INTO Accounts VALUES ( " + nextNumber + ", '" + getUsername() + "', '" + getPassword() + "' )");
     }
 
+
     public boolean loginToAccount() {
         
         try {
