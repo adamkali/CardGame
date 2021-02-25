@@ -13,17 +13,16 @@ public class SqlAccounts {
     private boolean isAccountCreated;
     private int numberOfAccounts;
 
-    private Connection accountConnection;
-
     public boolean loginCase;
 
     public SqlAccounts(String Name, String Password) {
+
 
         setUsername(Name);
         setPassword(Password);
 
         try {
-            startConnection();
+            setAccountNumber();
         } catch (SQLException sqlException) {
             loginCase = false;
         } finally {
@@ -43,30 +42,28 @@ public class SqlAccounts {
 
     public int getNumberOfAccounts() { return numberOfAccounts; }
 
-
-    public Connection getAccountConnection() { return accountConnection; }
-
-    private void startConnection() throws SQLException {
-        this.accountConnection = DriverManager.getConnection("jbdc:mysql:localhost:3306/accountdatabase", "root", "Sierra&Adam4ever");
-        setAccountNumber();
-    }
-
     public boolean checkAccount( String queryUName, String queryPassword ) throws SQLException {
-        getAccountConnection();
+       
+        Connection connection = DriverManager.getConnection("jbdc:mysql://localhost:3306\\accountdatabase", "root", "Sierra&Adam4ever");
         
-        PreparedStatement statement = getAccountConnection().prepareStatement("Select name, password from account where name=? and password=?");
+        PreparedStatement statement = connection.prepareStatement("Select name, password from account where name=? && password=?");
 
         statement.setString(1, queryUName);
         statement.setString(2, queryPassword);
 
         ResultSet result = statement.executeQuery();
 
+        if ( result.next() ) {
+            System.out.println("Tell me why!");
+        }
+
         return result.next();
     }
     
     private void setAccountNumber() throws SQLException {
     
-        Statement statement = getAccountConnection().createStatement();
+        Connection connection = DriverManager.getConnection("jbdc:mysql://localhost:3306\\accountdatabase", "root", "Sierra&Adam4ever");
+        Statement statement = connection.createStatement();
 
         String query = "select count(*) from Accounts";
 
@@ -77,12 +74,13 @@ public class SqlAccounts {
     }
 
     public void createPlayerAccount() throws SQLException {
+        
+        Connection connection = DriverManager.getConnection("jbdc:mysql://localhost:3306/accountdatabase", "root", "Sierra&Adam4ever");
+        Statement statement = connection.createStatement();
 
-       Statement statement = getAccountConnection().createStatement();
+        int nextNumber = getNumberOfAccounts() + 1;
 
-       int nextNumber = getNumberOfAccounts() + 1;
-
-       statement.executeUpdate("INSERT INTO Accounts VALUES ( " + nextNumber + ", '" + getUsername() + "', '" + getPassword() + "' )");
+        statement.executeUpdate("INSERT INTO Accounts VALUES ( " + nextNumber + ", '" + getUsername() + "', '" + getPassword() + "' )");
     }
 
 

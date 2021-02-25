@@ -21,7 +21,8 @@ public class Player {
     // To be implemented with SQL
     private int mana;
 
-    public boolean isConnected = true;
+    private boolean isConnected = true;
+    private boolean isLoggedIn;
 
     public Player( String uName, String pWord) {
 
@@ -31,6 +32,7 @@ public class Player {
             if ( sqlAccount.loginToAccount() ) {
                 setAccount(uName);
                 setPassword(pWord);
+                setIsLoggedIn(sqlAccount.loginToAccount());
             }
         }
     }
@@ -41,10 +43,13 @@ public class Player {
             createPlayerAccount(uName, wantedPWord, confirmPWord);
             sqlAccount = new SqlAccounts(getAccount(), getPassword());
             sqlAccount.createPlayerAccount();
+            setIsLoggedIn(true);
         } catch (LogInException | SQLException e) {
             e.printStackTrace();
         }
     }
+
+    public boolean getIsLoggedIn() { return isLoggedIn; }
 
     public String getAccount() {
         return account;
@@ -62,6 +67,8 @@ public class Player {
         this.account = account;
     }
 
+    public void setIsLoggedIn( boolean bool ) { this.isLoggedIn = bool; }
+
     // Authentication
 
     public void createPlayerAccount( String username, String wantedPassword, String confirmPassword ) throws LogInException {
@@ -69,9 +76,12 @@ public class Player {
         boolean pFlag = false; 
 
         // isUsed will not be gratuitous when SQL is implemented.
-        if ( isUNameValid(username) ) { uFlag = true; }
+        if ( isUNameValid(username) ) { 
+            uFlag = true; 
+            System.out.println("username true");
+        }
 
-        if ( wantedPassword.equals(confirmPassword) && isPasswordValid(password) ) { pFlag = true; }
+        if ( wantedPassword.equals(confirmPassword) && isPasswordValid( wantedPassword ) ) { pFlag = true; }
 
         if ( uFlag && pFlag ) {
             setPassword(wantedPassword);
@@ -84,10 +94,7 @@ public class Player {
     private static boolean isPasswordValid( String password ) { 
         
         // Regex to check valid password. 
-        String regex = "^(?=.*[0-9])"
-                       + "(?=.*[a-z])(?=.*[A-Z])"
-                       + "(?=.*[@#$%^&+=])"
-                       + "(?=\\S+$).{8,20}$"; 
+        String regex = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}";
   
         // Compile the ReGex 
         Pattern regexPattern = Pattern.compile(regex); 
@@ -100,17 +107,24 @@ public class Player {
         
         Matcher doesPassMatch = regexPattern.matcher(password);
 
+        if ( doesPassMatch.matches() ) {
+            System.out.println("password true");
+        }
+
         return doesPassMatch.matches();
     }
 
     private static boolean isUNameValid( String uName ) {
-        Pattern regexUNamePattern = Pattern.compile("[^A-Za-z0-9]");
+        Pattern regexUNamePattern = Pattern.compile("^[A-Za-z0-9]\\w{5,29}");
 
         if ( uName == null ) {
+            System.out.println("uName is Null");
             return false;
         }
 
         Matcher doesUNameMatch = regexUNamePattern.matcher(uName);
+
+        if ( !doesUNameMatch.matches() ) { System.out.println("this is false"); } 
 
         return doesUNameMatch.matches();
     }

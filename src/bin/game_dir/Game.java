@@ -32,6 +32,8 @@ public class Game {
         String pWord = System.console().readLine("Password: ");
 
         setPlayer(uName, pWord);
+
+        setIsLoggedIn(getPlayer().getIsLoggedIn());
     }
 
     private void gameCreateAccount() {
@@ -41,13 +43,15 @@ public class Game {
 
         createPlayer(uName, wantPass, confPass);
 
+        setIsLoggedIn(getPlayer().getIsLoggedIn());
+
     }
 
     public void runGame() {
         startGame();
 
         while ( getIsGameOn() ) {
-            String answer = System.console().readLine("[1] Login | [2] Create Account | [3] Quit");
+            String answer = System.console().readLine("[1] Login | [2] Create Account | [3] Quit\n");
 
             if ( answer.equals("1") ) {
                 gameLogIn();
@@ -60,10 +64,10 @@ public class Game {
             }
 
             while ( getIsLoggedIn() ) {
-                String answer1 = System.console().readLine("[1] Open card pack | [2] Quit game ");
+                String answer1 = System.console().readLine("[1] Open card pack | [2] Show Collection | [3] Quit\n");
                 
                 if ( answer1.equals("1") ) {
-                    getPlayer().openPack(allCards);
+                    getPlayer().openPack(getAllCards());
                 } else if ( answer1.equals("2") ) {
                     getPlayer().showCollection();
                 } else if ( answer1.equals("3") ) {
