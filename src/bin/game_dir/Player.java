@@ -31,9 +31,7 @@ public class Player {
         try {
             sqlAccount = new SqlAccounts( getAccount(), getPassword() );
             boolean tryBoolean = sqlAccount.checkAccount(getAccount(), getPassword());           
-            if ( !tryBoolean ) {
-                setIsLoggedIn(tryBoolean);
-            }
+            setIsLoggedIn(tryBoolean);
         } catch ( LogInException | SQLException exception ) {
             exception.printStackTrace();
         }
@@ -48,6 +46,7 @@ public class Player {
             setIsLoggedIn(true);
         } catch (LogInException | SQLException e) {
             e.printStackTrace();
+            setIsLoggedIn(false);
         }
     }
 

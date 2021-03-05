@@ -6,10 +6,9 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch MainUIController",
+            "name": "Launch Game",
             "request": "launch",
-            "vmArgs": "--module-path P:/Java/lib/javafx-sdk-11.0.2/lib --add-modules javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media,javafx.swing,javafx.web",
-            "mainClass": "CardGame.src.bin.game_dir.ui.MainUIController",
+            "mainClass": "src.bin.game_dir.Game",
             "projectName": "CardGame_5cf55b09"
         },
         {
@@ -18,20 +17,7 @@
             "request": "launch",
             "mainClass": "${file}"
         },
-        {
-            "type": "java",
-            "name": "Launch CardPack",
-            "request": "launch",
-            "mainClass": "CardGame.src.bin.card_dir.CardPack",
-            "projectName": "CardGame_5cf55b09"
-        },
-        {
-            "type": "java",
-            "name": "Launch CardXmlParse",
-            "request": "launch",
-            "mainClass": "CardGame.src.bin.card_dir.CardXmlParse",
-            "projectName": "CardGame_5cf55b09"
-        },
+    
         {
             "type": "java",
             "name": "Launch GUI",
@@ -40,19 +26,5 @@
             "mainClass": "CardGame.src.bin.game_dir.GUI",
             "projectName": "CardGame_5cf55b09"
         },
-        {
-            "type": "java",
-            "name": "Launch CardPackTest",
-            "request": "launch",
-            "mainClass": "CardGame.src.test.CardPackTest",
-            "projectName": "CardGame_5cf55b09"
-        },
-        {
-            "type": "java",
-            "name": "Launch TestGame",
-            "request": "launch",
-            "mainClass": "CardGame.src.test.TestGame",
-            "projectName": "CardGame_5cf55b09"
-        }
     ]
 }

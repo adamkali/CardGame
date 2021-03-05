@@ -38,7 +38,7 @@ public class LoginUi implements EventHandler<ActionEvent> {
         temp.setGamePWord(passwordField.getText());
 
         temp.gameLogIn();
-        
+
         if ( temp.getIsLoggedIn() ) {
             MainUIController tempController = new MainUIController();
             MainUIController.guiQuit();
@@ -51,7 +51,7 @@ public class LoginUi implements EventHandler<ActionEvent> {
 
     public void goBack() throws IOException {
         MainUIController tempObject = new MainUIController();
-        tempObject.changeScene("initializeUI.fxml");
+        tempObject.changeScene("initializeUI.fxml", 178.0, 307.0);
     }
 
     @Override

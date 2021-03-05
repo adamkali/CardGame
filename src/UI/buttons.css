@@ -1,0 +1,12 @@
+.quit-button {
+    -fx-background-color: linear-gradient(#ab4639, #8a1e08);
+    -fx-background-radius: 8;
+    -fx-background-insets: 0;
+    -fx-text-fill: #ebd17c;
+}
+.normal-button {
+    -fx-background-color: linear-gradient(#23bfce, #245aa0);
+    -fx-background-radius: 8;
+    -fx-background-insets: 0;
+    -fx-text-fill: #ebd17c;
+}

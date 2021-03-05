@@ -41,7 +41,7 @@ public class Initialize implements EventHandler<ActionEvent> {
     private static void guiGameSignUp() throws IOException {
         MainUIController tempUI = new MainUIController();
 
-        tempUI.changeScene("signUpUI.fxml");
+        tempUI.changeScene("signUpUI.fxml", 650.0, 450.0);
 
         Game tempGame = MainUIController.gameObject;
         tempGame.gameCreateAccount();
@@ -49,14 +49,7 @@ public class Initialize implements EventHandler<ActionEvent> {
 
     private static void guiGameLogIn() throws IOException {
         MainUIController tempUiController = new MainUIController();
-
-        MainUIController.getStg().setWidth(650);
-        MainUIController.getStg().setHeight(450);
-        tempUiController.changeScene("loginUi.fxml");
-
-        if ( MainUIController.gameObject.getIsLoggedIn() ) {
-            tempUiController.changeScene("InGameUi.fxml");
-        }
+        tempUiController.changeScene("loginUi.fxml", 650.0, 450.0);
     }
 
 }

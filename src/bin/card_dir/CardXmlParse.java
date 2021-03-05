@@ -101,10 +101,5 @@ public class CardXmlParse {
         for (int iterator = 0; iterator < cList.size(); iterator++ ) {
             System.out.println("Card No."+iterator+"\n"+ cList.get(iterator).toString()+"\n\n");
         }
-    }
-
-    public static void main(String[] args) {
-        CardXmlParse cardXmlParse = new CardXmlParse("CardGame\\data\\cards.xml");
-        cardXmlParse.printAllCardsInXmlDoc();
-   } 
+    } 
 }

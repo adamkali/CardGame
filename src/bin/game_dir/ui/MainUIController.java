@@ -22,25 +22,21 @@ public class MainUIController extends Application{
         getStg().setOnCloseRequest(e -> guiQuit());
 
         getStg().setResizable(true);
-        Parent root = FXMLLoader.load(getClass().getResource("initalizeUI.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("initializeUI.fxml"));
         getStg().setTitle("Game");
         setScene(new Scene(root, 178.0, 257.0));
         getStg().setScene(scene);
         getStg().show();
     }
 
-    public void changeScene(String fxml) throws IOException {
-        System.out.println(fxml);
+    public void changeScene(String fxml, Double width, Double height) throws IOException {
         Parent pane = FXMLLoader.load(getClass().getResource(fxml));
-        stg.getScene().setRoot(pane);
-
+        getStg().setWidth(width);
+        getStg().setHeight(height);
+        getStg().getScene().setRoot(pane);
     }
 
     public static void initialize(String[] args) { launch(args); }
-
-    public static void main(String[] args) {
-        launch(args);
-    }
 
     public static void guiQuit() { stg.close(); }
 

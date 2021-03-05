@@ -5,7 +5,7 @@ import src.bin.game_dir.ui.MainUIController;
 
 public class Game {
     
-    private final CardXmlParse allCards = new CardXmlParse("CardGame\\data\\cards.xml");
+    private final CardXmlParse allCards = new CardXmlParse("src\\data\\cards.xml");
     private Player player;
     private boolean isLoggedIn = false;
 
